@@ -552,7 +552,7 @@ export class DOMWorld {
     const context = await this.executionContext();
     try {
       payload = JSON.parse(event.payload);
-    } catch {
+    } catch (ex) {
       // The binding was either called by something in the page or it was
       // called before our wrapper was initialized.
       return;

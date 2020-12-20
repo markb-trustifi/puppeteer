@@ -165,7 +165,7 @@ export async function downloadBrowser() {
             try {
               const versions = JSON.parse(data);
               return resolve(versions.FIREFOX_NIGHTLY);
-            } catch {
+            } catch (ex) {
               return reject(new Error('Firefox version not found'));
             }
           });
